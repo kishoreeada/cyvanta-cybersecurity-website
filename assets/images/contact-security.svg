@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+<defs><linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55e6ff" stop-opacity=".18"/><stop offset="1" stop-color="#8c7bff" stop-opacity=".18"/></linearGradient></defs>
+<rect width="1000" height="650" rx="34" fill="#07101b"/>
+<rect x="120" y="120" width="760" height="410" rx="26" fill="url(#c)" stroke="#55e6ff" stroke-opacity=".22"/>
+<g fill="none" stroke="#55e6ff" stroke-width="2"><path d="M205 210h590M205 270h590M205 330h590M205 390h590"/></g>
+<circle cx="300" cy="470" r="22" fill="#55e6ff" fill-opacity=".18" stroke="#55e6ff"/><circle cx="700" cy="180" r="18" fill="#8c7bff" fill-opacity=".18" stroke="#8c7bff"/>
+<path d="M300 470C430 410 520 350 700 180" fill="none" stroke="url(#c)" stroke-width="4"/>
+<path d="M470 265l35 35 75-82" fill="none" stroke="#55e6ff" stroke-width="9" stroke-linecap="round"/>
+<text x="205" y="170" fill="#8ea4b9" font-family="monospace" font-size="14">SECURE CHANNEL / CONSULTATION</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f2433"/><stop offset="1" stop-color="#17152e"/></linearGradient></defs>
+<rect width="1000" height="650" rx="34" fill="url(#b)"/>
+<g opacity=".3" stroke="#55e6ff"><path d="M0 520L250 270l130 100 170-220 210 150 240-210"/><path d="M0 560L250 310l130 100 170-220 210 150 240-210"/></g>
+<circle cx="700" cy="250" r="130" fill="none" stroke="#55e6ff" stroke-opacity=".18"/><circle cx="700" cy="250" r="82" fill="none" stroke="#8c7bff" stroke-opacity=".2"/>
+<path d="M700 155l75 29v67c0 67-40 108-75 130-35-22-75-63-75-130v-67z" fill="#07101b" stroke="#55e6ff" stroke-width="3"/>
+<path d="m672 250 22 22 43-49" fill="none" stroke="#55e6ff" stroke-width="8" stroke-linecap="round"/>
+<text x="70" y="110" fill="#8ea4b9" font-family="monospace" font-size="15">SECURITY / INSIGHTS</text>
+<text x="70" y="145" fill="#f4f8fc" font-family="sans-serif" font-size="34" font-weight="700">THREAT INTELLIGENCE</text>
+</svg>

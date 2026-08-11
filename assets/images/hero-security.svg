@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+<defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55e6ff"/><stop offset="1" stop-color="#8c7bff"/></linearGradient>
+ <radialGradient id="r"><stop stop-color="#55e6ff" stop-opacity=".22"/><stop offset="1" stop-color="#55e6ff" stop-opacity="0"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="900" height="700" rx="36" fill="#07101b"/>
+<circle cx="690" cy="170" r="250" fill="url(#r)"/>
+<g opacity=".25" stroke="#9ab1c7" stroke-width="1">
+ <path d="M80 110H820M80 180H820M80 250H820M80 320H820M80 390H820M80 460H820M80 530H820M80 600H820"/>
+ <path d="M120 70V630M200 70V630M280 70V630M360 70V630M440 70V630M520 70V630M600 70V630M680 70V630M760 70V630"/>
+</g>
+<g fill="none" stroke="url(#g)" opacity=".65">
+ <circle cx="450" cy="350" r="210"/><circle cx="450" cy="350" r="155"/><circle cx="450" cy="350" r="100"/>
+</g>
+<g filter="url(#glow)">
+ <path d="M450 150l125 48v112c0 113-67 181-125 213-58-32-125-100-125-213V198z" fill="#0b1a29" stroke="#55e6ff" stroke-width="3"/>
+ <path d="M450 210l77 30v69c0 69-39 113-77 138-38-25-77-69-77-138v-69z" fill="url(#g)" opacity=".15" stroke="#8c7bff"/>
+ <path d="m407 309 31 31 62-69" fill="none" stroke="#55e6ff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g font-family="monospace" font-size="14" fill="#8ea4b9">
+ <text x="72" y="78">CYVANTA / SECURITY CORE</text><text x="665" y="625">THREAT STATUS: PROTECTED</text>
+</g>
+<g fill="#55e6ff"><circle cx="140" cy="560" r="4"/><circle cx="740" cy="125" r="4"/><circle cx="765" cy="420" r="4"/></g>
+</svg>

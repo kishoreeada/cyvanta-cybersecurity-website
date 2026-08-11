@@ -1,0 +1,8 @@
+CYVANTA FINAL SOURCE MANIFEST
+
+Public pages: index.html, about.html, services.html, blog.html, contact.html, login.html, signup.html, 404.html
+Admin pages: admin/dashboard-overview.html, dashboard-security.html, dashboard-activity.html, dashboard-reports.html, dashboard-settings.html
+Client pages: client/dashboard-overview.html, dashboard-security.html, dashboard-activity.html, dashboard-reports.html, dashboard-settings.html
+Shared CSS: css/style.css
+Shared JavaScript: js/main.js
+Images: assets/images/ and assets/images/cyber/

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+<defs><linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55e6ff"/><stop offset="1" stop-color="#8c7bff"/></linearGradient></defs>
+<rect width="1000" height="650" rx="34" fill="#07101b"/>
+<g fill="none" stroke="#314256" stroke-width="2">
+<path d="M180 320h640"/><path d="M500 120v400"/>
+<circle cx="180" cy="320" r="60"/><circle cx="500" cy="320" r="70"/><circle cx="820" cy="320" r="60"/>
+</g>
+<g fill="#0b1a29" stroke="url(#s)" stroke-width="3">
+<circle cx="180" cy="320" r="46"/><circle cx="500" cy="320" r="56"/><circle cx="820" cy="320" r="46"/>
+</g>
+<g fill="#55e6ff" font-family="monospace" text-anchor="middle">
+<text x="180" y="326" font-size="15">ASSESS</text><text x="500" y="326" font-size="15">PROTECT</text><text x="820" y="326" font-size="15">RESPOND</text>
+</g>
+<g fill="#8ea4b9" font-family="monospace" font-size="13" text-anchor="middle">
+<text x="180" y="420">EXPOSURE</text><text x="500" y="420">CONTROLS</text><text x="820" y="420">RECOVERY</text>
+</g>
+</svg>
