@@ -241,8 +241,9 @@ img {
 .hero-actions {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 34px;
+  /* width:750px */
 }
 .btn {
   padding: 14px 20px;
@@ -250,6 +251,8 @@ img {
 .btn-primary {
   background: linear-gradient(100deg, var(--cyan), #8af3ff 55%, #9f8cff);
   color: #041019;
+  width: 150px;
+  height: 58px;
   box-shadow: 0 10px 35px rgba(85, 230, 255, 0.12);
 }
 .btn-secondary {
@@ -808,6 +811,7 @@ img {
   font-size: 12px;
   margin: 10px 0;
 }
+
 .footer a:hover {
   color: #fff;
 }
@@ -820,7 +824,92 @@ img {
   color: #5f6d7e;
   font: 10px "DM Mono";
 }
+/* =========================================
+   FOOTER SOCIAL LINKS
+   ========================================= */
 
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+/* =========================================
+   FOOTER SOCIAL LINKS
+   ========================================= */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(84, 223, 245, 0.22);
+  border-radius: 12px;
+
+  background: rgba(9, 22, 35, 0.8);
+
+  color: #8fa4bb;
+  text-decoration: none;
+
+  transition: transform 0.3s ease color 0.3s ease background 0.3s ease
+    border-color 0.3s ease box-shadow 0.3s ease;
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-link:hover {
+  color: #75abd7;
+  background: transparent;
+  border-color: #c8dbde;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 24px rgba(84, 223, 245, 0.22);
+}
+
+/* Instagram outline */
+.social-link:last-child svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .footer-socials {
+    gap: 9px;
+    margin-top: 18px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+  .social-link svg {
+    width: 17px;
+    height: 17px;
+  }
+}
 /* INNER PAGES */
 .page-hero {
   padding: 145px 0 72px;
@@ -1433,6 +1522,7 @@ select:focus-visible {
   color: #718196;
   font-size: 10px;
 }
+
 .auth-row {
   display: flex;
   justify-content: space-between;
@@ -2061,10 +2151,37 @@ select:focus-visible {
   font: 12px "DM Mono";
 }
 .footer-socials a:hover {
-  color: var(--cyan);
+  /* color: var(--cyan); */
   border-color: rgba(85, 230, 255, 0.35);
   transform: translateY(-2px);
 }
+/* ///// */
+/* =========================================
+   FOOTER ACTIVE LINK
+   ========================================= */
+
+.footer-explore a.footer-active {
+  display: inline-block;
+  width: fit-content;
+  color: #54dff5;
+  position: relative;
+}
+
+.footer-explore a.footer-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: #54dff5;
+  box-shadow: 0 0 8px rgba(84, 223, 245, 0.45);
+}
+
+.footer-explore a.footer-active:hover {
+  color: #54dff5;
+}
+
 .auth-split {
   grid-template-columns: minmax(360px, 520px) minmax(400px, 500px);
   justify-content: center;
@@ -4170,4 +4287,28 @@ body.menu-open .nav {
     justify-content: center;
     line-height: 1;
   }
+}
+
+/* =========================================
+   FORM VALIDATION
+   ========================================= */
+
+.field-error {
+  display: block;
+  min-height: 18px;
+  margin-top: 6px;
+  color: #ff6b7a;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.input-error {
+  border-color: #ff6b7a !important;
+  box-shadow: 0 0 0 1px rgba(255, 107, 122, 0.15);
+}
+
+.input-error:focus {
+  border-color: #ff6b7a !important;
+  box-shadow: 0 0 0 2px rgba(255, 107, 122, 0.1);
 }

@@ -116,7 +116,7 @@
               ><strong>Focused discovery · prioritized roadmap</strong>
             </div>
           </div>
-          <form class="form reveal delay-1" id="contactForm">
+          <form class="form reveal delay-1" id="contactForm" novalidate>
             <div class="form-grid">
               <div class="field">
                 <label for="name">FULL NAME *</label
@@ -128,6 +128,7 @@
                   placeholder="Your name"
                   required=""
                 />
+                <small class="field-error" id="nameError"></small>
               </div>
               <div class="field">
                 <label for="email">WORK EMAIL *</label
@@ -138,6 +139,7 @@
                   required=""
                   type="email"
                 />
+                <small class="field-error" id="emailError"></small>
               </div>
             </div>
             <div class="form-grid">
@@ -147,7 +149,9 @@
                   id="company"
                   name="company"
                   placeholder="Company name"
+                  required=""
                 />
+                <small class="field-error" id="companyError"></small>
               </div>
               <div class="field">
                 <label for="service">AREA OF INTEREST *</label
@@ -160,6 +164,7 @@
                   <option>Data Protection</option>
                   <option>Incident Response</option>
                 </select>
+                <small class="field-error" id="serviceError"></small>
               </div>
             </div>
             <div class="field">
@@ -171,6 +176,7 @@
                 placeholder="Tell us about your security priorities..."
                 required=""
               ></textarea>
+              <small class="field-error" id="messageError"></small>
             </div>
             <button class="btn btn-primary" type="submit">
               Send secure enquiry
@@ -206,11 +212,60 @@
               Enterprise cybersecurity built for the speed, complexity and
               uncertainty of modern digital business.
             </p>
+            <div class="footer-socials" aria-label="Social media links">
+              <a
+                href="404.html"
+                class="social-link"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.77-2.01-5.52-4.69-5.52-2.16 0-3.13 1.19-3.67 2.02V8.5H9.15V21h3.49v-6.19c0-1.63.31-3.2 2.32-3.2 1.98 0 2 1.85 2 3.31V21H21v-7.15Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="404.html"
+                class="social-link"
+                aria-label="GitHub"
+                title="GitHub"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2C6.48 2 2 6.58 2 12.24c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.72c-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.59 2.36 1.13 2.94.87.09-.67.35-1.13.64-1.39-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.2 9.2 0 0 1 12 9.4c.85 0 1.7.12 2.49.37 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z"
+                  />
+                </svg>
+              </a>
+
+              <a href="404.html" class="social-link" aria-label="X" title="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M18.9 2H22l-6.77 7.74L23.2 22h-6.25l-4.9-6.4L6.45 22H3.3l7.24-8.28L2.8 2h6.4l4.43 5.85L18.9 2Zm-1.1 17.8h1.73L8.3 4.08H6.45L17.8 19.8Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="404.html"
+                class="social-link"
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" />
+                </svg>
+              </a>
+            </div>
           </div>
-          <div>
+          <div class="footer-explore">
             <h4>Explore</h4>
-            <a href="about.html">About</a><a href="services.html">Services</a
-            ><a href="blog.html">Security Insights</a
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a><a href="blog.html"> Insights</a
             ><a href="contact.html">Contact</a>
           </div>
           <div>

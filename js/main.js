@@ -445,10 +445,10 @@ document.addEventListener("DOMContentLoaded", () => {
       showError(confirm, "Passwords do not match.");
       ok = false;
     } else showError(confirm, "");
-    if (!terms?.checked) {
-      if (msg) msg.textContent = "Please accept the security policy.";
-      ok = false;
-    }
+    // if (!terms?.checked) {
+    //   if (msg) msg.textContent = "Please accept the security policy.";
+    //   ok = false;
+    // }
     if (!ok) return;
     if (msg)
       msg.textContent =
@@ -551,3 +551,177 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/* =========================================
+   FOOTER ACTIVE PAGE
+   Only Explore navigation gets active state
+   ========================================= */
+
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll(".footer-explore a[href]").forEach((link) => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("footer-active");
+  }
+});
+
+/* =========================================
+   CONTACT FORM VALIDATION
+   ========================================= */
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const companyInput = document.getElementById("company");
+  const serviceInput = document.getElementById("service");
+  const messageInput = document.getElementById("message");
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const companyError = document.getElementById("companyError");
+  const serviceError = document.getElementById("serviceError");
+  const messageError = document.getElementById("messageError");
+
+  function showError(input, errorElement, message) {
+    input.classList.add("input-error");
+    errorElement.textContent = message;
+  }
+
+  function clearError(input, errorElement) {
+    input.classList.remove("input-error");
+    errorElement.textContent = "";
+  }
+
+  function validateName() {
+    const value = nameInput.value.trim();
+
+    if (!value) {
+      showError(nameInput, nameError, "Full name is required.");
+      return false;
+    }
+
+    if (value.length < 2) {
+      showError(nameInput, nameError, "Name must be at least 2 characters.");
+      return false;
+    }
+
+    if (!/^[A-Za-z .'-]+$/.test(value)) {
+      showError(nameInput, nameError, "Name must contain alphabets only.");
+      return false;
+    }
+
+    clearError(nameInput, nameError);
+    return true;
+  }
+
+  function validateEmail() {
+    const value = emailInput.value.trim();
+
+    if (!value) {
+      showError(emailInput, emailError, "Work email is required.");
+      return false;
+    }
+
+    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    if (!emailPattern.test(value)) {
+      showError(emailInput, emailError, "Enter a valid work email.");
+      return false;
+    }
+
+    clearError(emailInput, emailError);
+    return true;
+  }
+
+ function validateCompany() {
+  const value = companyInput.value.trim();
+
+  if (!value) {
+    showError(
+      companyInput,
+      companyError,
+      "Company name is required."
+    );
+    return false;
+  }
+
+  if (!/^[A-Za-z0-9 .&,'-]+$/.test(value)) {
+    showError(
+      companyInput,
+      companyError,
+      "Enter a valid company name."
+    );
+    return false;
+  }
+
+  clearError(companyInput, companyError);
+  return true;
+}~
+
+  function validateService() {
+    if (!serviceInput.value) {
+      showError(serviceInput, serviceError, "Please select a service.");
+      return false;
+    }
+
+    clearError(serviceInput, serviceError);
+    return true;
+  }
+
+  function validateMessage() {
+    const value = messageInput.value.trim();
+
+    if (!value) {
+      showError(messageInput, messageError, "Message is required.");
+      return false;
+    }
+
+    if (value.length < 10) {
+      showError(
+        messageInput,
+        messageError,
+        "Message must be at least 10 characters.",
+      );
+      return false;
+    }
+
+    clearError(messageInput, messageError);
+    return true;
+  }
+
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const isNameValid = validateName();
+    const isEmailValid = validateEmail();
+    const isCompanyValid = validateCompany();
+    const isServiceValid = validateService();
+    const isMessageValid = validateMessage();
+
+    const isFormValid =
+      isNameValid &&
+      isEmailValid &&
+      isCompanyValid &&
+      isServiceValid &&
+      isMessageValid;
+
+    if (!isFormValid) {
+      return;
+    }
+
+    // Valid form → navigate to 404 page
+    window.location.href = "404.html";
+  });
+
+  /* Validate while user leaves each field */
+
+  nameInput.addEventListener("blur", validateName);
+  emailInput.addEventListener("blur", validateEmail);
+  companyInput.addEventListener("blur", validateCompany);
+  serviceInput.addEventListener("change", validateService);
+  messageInput.addEventListener("blur", validateMessage);
+}
