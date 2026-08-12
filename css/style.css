@@ -169,7 +169,7 @@ img {
   gap: 30px;
 }
 .nav-links a {
-  font-size: 13px;
+  font-size: 15px;
   color: #b9c5d3;
   transition: 0.25s;
 }
@@ -219,7 +219,6 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 140px 0 100px;
 }
 .hero-grid {
   display: grid;
@@ -273,7 +272,7 @@ img {
   align-items: center;
   gap: 10px;
   color: #6f7e91;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 26px;
 }
 .status-dot {
@@ -411,7 +410,7 @@ img {
 }
 .trust-label {
   color: #617084;
-  font: 11px "DM Mono";
+  font: 12px "DM Mono";
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
@@ -448,7 +447,7 @@ img {
   color: var(--cyan);
 }
 .stat p {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   margin-top: 5px;
 }
@@ -499,7 +498,7 @@ img {
   margin: 42px 0 8px;
 }
 .service-card p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   max-width: 300px;
 }
@@ -543,7 +542,7 @@ img {
   display: flex;
   gap: 11px;
   align-items: flex-start;
-  font-size: 13px;
+  font-size: 15px;
   color: #c3cfdb;
 }
 .check {
@@ -672,7 +671,7 @@ img {
   margin: 28px 0 5px;
 }
 .process-step p {
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
 }
 
@@ -704,7 +703,7 @@ img {
   font-size: 22px;
 }
 .industry-card p {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
 }
 .industry-icon {
@@ -757,7 +756,7 @@ img {
 
 /* CTA */
 .cta {
-  padding: 90px 0;
+  padding-bottom: 40px;
 }
 .cta-box {
   border: 1px solid rgba(85, 230, 255, 0.18);
@@ -808,7 +807,7 @@ img {
 .footer a {
   display: block;
   color: #7f8da0;
-  font-size: 12px;
+  font-size: 15px;
   margin: 10px 0;
 }
 
@@ -822,7 +821,7 @@ img {
   display: flex;
   justify-content: space-between;
   color: #5f6d7e;
-  font: 10px "DM Mono";
+  font: 14px "DM Mono";
 }
 /* =========================================
    FOOTER SOCIAL LINKS
@@ -912,7 +911,7 @@ img {
 }
 /* INNER PAGES */
 .page-hero {
-  padding: 145px 0 72px;
+  padding: 100px 0 50px;
   position: relative;
 }
 .page-hero h1 {
@@ -950,7 +949,7 @@ img {
   margin-bottom: 10px;
 }
 .info-card p {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--muted);
 }
 .blog-grid {
@@ -1281,7 +1280,7 @@ img {
     grid-template-columns: 1fr;
   }
   .page-hero {
-    padding-top: 135px;
+    padding-top: 105px;
   }
   .page-hero h1 {
     font-size: 52px;
@@ -2022,6 +2021,7 @@ select:focus-visible {
   }
   .nav-auth a {
     width: 100%;
+
     text-align: center;
   }
   .dashboard-kpis {
@@ -2100,7 +2100,7 @@ select:focus-visible {
 .footer-brand p {
   max-width: 260px;
   color: #64748a;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.7;
   margin-top: 16px;
 }
@@ -2113,7 +2113,7 @@ select:focus-visible {
   color: #5d6c80;
 }
 .footer-links a {
-  font-size: 11px;
+  font-size: 12px;
   color: #7f8ea1;
 }
 .footer-links a:hover {
@@ -2380,6 +2380,7 @@ select:focus-visible {
   }
   .nav-auth a {
     flex: 1;
+    height: fit-content;
   }
   .auth-split {
     grid-template-columns: 1fr;
@@ -3120,7 +3121,7 @@ body.menu-open .nav {
     padding: 70px 0;
   }
   .page-hero {
-    padding: 120px 0 55px;
+    padding: 100px 0 55px;
   }
   .photo-panel,
   .photo-panel img {
@@ -3810,7 +3811,7 @@ body.menu-open .nav {
   }
 
   .page-hero {
-    padding: 104px 0 58px;
+    padding: 70px 0 58px;
   }
 
   .hero {
@@ -3849,8 +3850,8 @@ body.menu-open .nav {
 .nav-signup,
 .nav-login {
   min-width: 84px;
-  height: 45px;
-  padding: 0 18px !important;
+  height: 95px;
+  /* padding: 0 18px !important; */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3934,6 +3935,7 @@ body.menu-open .nav {
 
   .nav-auth a {
     flex: 0 0 auto;
+    height: fit-content;
   }
 }
 
@@ -3965,8 +3967,8 @@ body.menu-open .nav {
   .nav-links {
     position: fixed !important;
     inset: 0 !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
+    width: 100% !important;
+    max-width: 100% !important;
     height: 100dvh !important;
     min-height: 100dvh !important;
     padding: 86px 28px 34px !important;
@@ -4058,6 +4060,9 @@ body.menu-open .nav {
 
   body.menu-open {
     overflow: hidden !important;
+  }
+  body.menu-open .menu-toggle {
+    display: none !important;
   }
 }
 
