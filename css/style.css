@@ -4294,13 +4294,16 @@ body.menu-open .nav {
    ========================================= */
 
 .field-error {
-  display: block;
-  min-height: 18px;
+  display: none;
   margin-top: 6px;
   color: #ff6b7a;
   font-size: 0.75rem;
   line-height: 1.4;
   letter-spacing: 0.01em;
+}
+
+.field-error:not(:empty) {
+  display: block;
 }
 
 .input-error {

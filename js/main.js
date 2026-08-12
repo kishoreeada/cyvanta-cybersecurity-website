@@ -566,7 +566,6 @@ document.querySelectorAll(".footer-explore a[href]").forEach((link) => {
     link.classList.add("footer-active");
   }
 });
-
 /* =========================================
    CONTACT FORM VALIDATION
    ========================================= */
@@ -596,6 +595,8 @@ if (contactForm) {
     errorElement.textContent = "";
   }
 
+  /* ---------- Full Name ---------- */
+
   function validateName() {
     const value = nameInput.value.trim();
 
@@ -618,6 +619,8 @@ if (contactForm) {
     return true;
   }
 
+  /* ---------- Email ---------- */
+
   function validateEmail() {
     const value = emailInput.value.trim();
 
@@ -637,30 +640,26 @@ if (contactForm) {
     return true;
   }
 
- function validateCompany() {
-  const value = companyInput.value.trim();
+  /* ---------- Company ---------- */
 
-  if (!value) {
-    showError(
-      companyInput,
-      companyError,
-      "Company name is required."
-    );
-    return false;
+  function validateCompany() {
+    const value = companyInput.value.trim();
+
+    if (!value) {
+      showError(companyInput, companyError, "Company name is required.");
+      return false;
+    }
+
+    if (!/^[A-Za-z0-9 .&,'-]+$/.test(value)) {
+      showError(companyInput, companyError, "Enter a valid company name.");
+      return false;
+    }
+
+    clearError(companyInput, companyError);
+    return true;
   }
 
-  if (!/^[A-Za-z0-9 .&,'-]+$/.test(value)) {
-    showError(
-      companyInput,
-      companyError,
-      "Enter a valid company name."
-    );
-    return false;
-  }
-
-  clearError(companyInput, companyError);
-  return true;
-}~
+  /* ---------- Service ---------- */
 
   function validateService() {
     if (!serviceInput.value) {
@@ -671,6 +670,8 @@ if (contactForm) {
     clearError(serviceInput, serviceError);
     return true;
   }
+
+  /* ---------- Message ---------- */
 
   function validateMessage() {
     const value = messageInput.value.trim();
@@ -693,6 +694,8 @@ if (contactForm) {
     return true;
   }
 
+  /* ---------- Submit ---------- */
+
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -713,11 +716,11 @@ if (contactForm) {
       return;
     }
 
-    // Valid form → navigate to 404 page
+    /* All validation passed */
     window.location.href = "404.html";
   });
 
-  /* Validate while user leaves each field */
+  /* ---------- Individual Field Validation ---------- */
 
   nameInput.addEventListener("blur", validateName);
   emailInput.addEventListener("blur", validateEmail);
