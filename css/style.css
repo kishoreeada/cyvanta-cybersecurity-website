@@ -1001,7 +1001,7 @@ img {
   margin: 13px 0 8px;
 }
 .blog-body p {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
 }
 .contact-grid {
@@ -1021,15 +1021,16 @@ img {
 }
 .contact-item span {
   display: block;
-  font: 9px "DM Mono";
+  font: 14px "DM Mono";
   color: #637289;
   text-transform: uppercase;
   margin-bottom: 7px;
 }
 .contact-item strong {
-  font-size: 13px;
+  font-size: 16px;
 }
 .form {
+  height: max-content;
   border: 1px solid var(--line);
   border-radius: 24px;
   padding: 30px;
@@ -1045,7 +1046,7 @@ img {
 }
 .field label {
   display: block;
-  font: 10px "DM Mono";
+  font: 13px "DM Mono";
   color: #7c8a9c;
   margin-bottom: 7px;
 }
@@ -1448,8 +1449,8 @@ select:focus-visible {
   backdrop-filter: blur(18px);
 }
 .back-home {
-  font-size: 11px;
-  color: #7e8ca0;
+  font-size: 14px;
+  color: #d8e3f3;
 }
 .auth-page {
   min-height: calc(100vh - 78px);
@@ -1558,7 +1559,7 @@ select:focus-visible {
 .auth-switch {
   text-align: center;
   margin-top: 22px;
-  font-size: 11px;
+  font-size: 16px;
   color: #718095;
 }
 .demo-note {
@@ -3023,6 +3024,7 @@ body.menu-open .nav {
 }
 .photo-caption b {
   font-size: 18px;
+  margin-left: 15px;
 }
 .photo-caption span {
   font: 9px "DM Mono";
